@@ -3,15 +3,18 @@ import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import './App.css'
-import { Dashboard } from './Dashboard'
-import { Calculator } from './Calculator'
+// import { Dashboard } from './Dashboard'
+// import { Calculator } from './Calculator'
 
 function App() {
-  const [count, setCount] = useState(0);
-
-  function increaseCount(){
-    setCount((prevCount) => prevCount + 1);
-  }
+   const [showText, setShowText] = useState(true);
+  // const [count, setCount] = useState(0);
+    function Hello(){
+      setShowText(false)
+    }
+  // function increaseCount(){
+  //   setCount((prevCount) => prevCount + 1);
+  // }
   // const myAge = 19;
   // const isLoggedIn = true;
 
@@ -22,8 +25,10 @@ function App() {
 
   return (
     <>
-    <h1>{count}</h1>
-    <button onClick={increaseCount}>+1</button>
+    <h1>{Hello}</h1>
+    <button onClick={setShowText}>Click Me</button>
+    {/* <h1>{count}</h1>
+    <button onClick={increaseCount}>+1</button> */}
     {/* { myAge >= 18 ? (<h1>შენ შეგიძლია მართვის მოწმობის აღება</h1>
     ) : (
       <h1>შენ ვერ აიღებ მართვის მოწმობას</h1>
